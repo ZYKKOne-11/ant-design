@@ -3,7 +3,7 @@
 exports[`renders components/select/demo/automatic-tokenization.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-select-selector"
@@ -13,20 +13,22 @@ exports[`renders components/select/demo/automatic-tokenization.tsx extend contex
     >
       <div
         class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <div
           class="ant-select-selection-search"
-          style="width:0"
+          style="width: 0px;"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             role="combobox"
             type="search"
             value=""
@@ -44,19 +46,19 @@ exports[`renders components/select/demo/automatic-tokenization.tsx extend contex
     />
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-label="a10"
           aria-selected="false"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           a10
@@ -64,7 +66,7 @@ exports[`renders components/select/demo/automatic-tokenization.tsx extend contex
         <div
           aria-label="b11"
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           b11
@@ -72,16 +74,16 @@ exports[`renders components/select/demo/automatic-tokenization.tsx extend contex
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="false"
@@ -378,7 +380,7 @@ exports[`renders components/select/demo/automatic-tokenization.tsx extend contex
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -407,15 +409,15 @@ exports[`renders components/select/demo/automatic-tokenization.tsx extend contex
 exports[`renders components/select/demo/basic.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-horizontal ant-space-align-center"
-  style="flex-wrap:wrap;margin-bottom:-8px"
+  style="flex-wrap: wrap; margin-bottom: -8px;"
 >
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-show-arrow"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -424,16 +426,18 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -447,19 +451,19 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Jack"
               aria-selected="false"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               jack
@@ -467,7 +471,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               lucy
@@ -475,16 +479,16 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="false"
@@ -499,7 +503,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -516,7 +520,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -533,7 +537,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -550,7 +554,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -563,7 +567,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -590,11 +594,11 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
   </div>
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-show-arrow ant-select-disabled"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -603,18 +607,19 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
             disabled=""
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -628,19 +633,19 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               lucy
@@ -648,16 +653,16 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -672,7 +677,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -685,7 +690,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -712,11 +717,11 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
   </div>
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-show-arrow ant-select-loading"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -725,16 +730,18 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -748,19 +755,19 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               lucy
@@ -768,16 +775,16 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -792,7 +799,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -805,7 +812,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
       <span
         aria-hidden="true"
         class="ant-select-arrow ant-select-arrow-loading"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -832,11 +839,11 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
   </div>
   <div
     class="ant-space-item"
-    style="padding-bottom:8px"
+    style="padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-allow-clear ant-select-show-arrow"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -845,16 +852,18 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -868,19 +877,19 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               lucy
@@ -888,16 +897,16 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -912,7 +921,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -925,7 +934,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -951,7 +960,7 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
       <span
         aria-hidden="true"
         class="ant-select-clear"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -982,15 +991,15 @@ exports[`renders components/select/demo/basic.tsx extend context correctly 1`] =
 exports[`renders components/select/demo/bordered.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-horizontal ant-space-align-center"
-  style="flex-wrap:wrap;margin-bottom:-8px"
+  style="flex-wrap: wrap; margin-bottom: -8px;"
 >
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-borderless ant-select-single ant-select-show-arrow"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -999,16 +1008,18 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -1022,19 +1033,19 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Jack"
               aria-selected="false"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               jack
@@ -1042,7 +1053,7 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               lucy
@@ -1050,16 +1061,16 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="false"
@@ -1074,7 +1085,7 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1091,7 +1102,7 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1108,7 +1119,7 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1121,7 +1132,7 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -1148,11 +1159,11 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
   </div>
   <div
     class="ant-space-item"
-    style="padding-bottom:8px"
+    style="padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-borderless ant-select-single ant-select-show-arrow ant-select-disabled"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -1161,18 +1172,19 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
             disabled=""
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -1186,19 +1198,19 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               lucy
@@ -1206,16 +1218,16 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -1230,7 +1242,7 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1243,7 +1255,7 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -1274,15 +1286,15 @@ exports[`renders components/select/demo/bordered.tsx extend context correctly 1`
 exports[`renders components/select/demo/coordinate.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-horizontal ant-space-align-center"
-  style="flex-wrap:wrap;margin-bottom:-8px"
+  style="flex-wrap: wrap; margin-bottom: -8px;"
 >
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-show-arrow"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -1291,16 +1303,18 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -1314,19 +1328,19 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Zhejiang"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               Zhejiang
@@ -1334,7 +1348,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
             <div
               aria-label="Jiangsu"
               aria-selected="false"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               Jiangsu
@@ -1342,16 +1356,16 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -1366,7 +1380,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1383,7 +1397,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1396,7 +1410,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -1423,11 +1437,11 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
   </div>
   <div
     class="ant-space-item"
-    style="padding-bottom:8px"
+    style="padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-show-arrow"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -1436,16 +1450,18 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -1459,19 +1475,19 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Hangzhou"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               Hangzhou
@@ -1479,7 +1495,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
             <div
               aria-label="Ningbo"
               aria-selected="false"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               Ningbo
@@ -1487,16 +1503,16 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -1511,7 +1527,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1528,7 +1544,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1545,7 +1561,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -1558,7 +1574,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -1589,7 +1605,7 @@ exports[`renders components/select/demo/coordinate.tsx extend context correctly 
 exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-single ant-select-show-arrow"
-  style="width:300px"
+  style="width: 300px;"
 >
   <div
     class="ant-select-selector"
@@ -1598,16 +1614,18 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
       class="ant-select-selection-search"
     >
       <input
-        aria-activedescendant="undefined_list_0"
+        aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
         aria-autocomplete="list"
-        aria-controls="undefined_list"
+        aria-controls="rc_select_TEST_OR_SSR_list"
+        aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="undefined_list"
+        aria-owns="rc_select_TEST_OR_SSR_list"
         autocomplete="off"
         class="ant-select-selection-search-input"
+        id="rc_select_TEST_OR_SSR"
         readonly=""
         role="combobox"
-        style="opacity:0"
+        style="opacity: 0;"
         type="search"
         unselectable="on"
         value=""
@@ -1620,19 +1638,19 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-label="jack"
           aria-selected="false"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           jack
@@ -1640,7 +1658,7 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
         <div
           aria-label="lucy"
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           lucy
@@ -1648,16 +1666,16 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="false"
@@ -1672,7 +1690,7 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -1689,7 +1707,7 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -1700,15 +1718,15 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
       <div
         class="ant-divider ant-divider-horizontal"
         role="separator"
-        style="margin:8px 0"
+        style="margin: 8px 0px;"
       />
       <div
         class="ant-space ant-space-horizontal ant-space-align-center"
-        style="padding:0 8px 4px"
+        style="padding: 0px 8px 4px;"
       >
         <div
           class="ant-space-item"
-          style="margin-right:8px"
+          style="margin-right: 8px;"
         >
           <input
             class="ant-input"
@@ -1760,7 +1778,7 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -1789,7 +1807,7 @@ exports[`renders components/select/demo/custom-dropdown-menu.tsx extend context 
 exports[`renders components/select/demo/custom-tag-render.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-select-selector"
@@ -1799,12 +1817,12 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
     >
       <div
         class="ant-select-selection-overflow-item"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <span>
           <span
             class="ant-tag ant-tag-gold"
-            style="margin-right:3px"
+            style="margin-right: 3px;"
           >
             gold
             <span
@@ -1832,12 +1850,12 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
       </div>
       <div
         class="ant-select-selection-overflow-item"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <span>
           <span
             class="ant-tag ant-tag-cyan"
-            style="margin-right:3px"
+            style="margin-right: 3px;"
           >
             cyan
             <span
@@ -1865,23 +1883,25 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
       </div>
       <div
         class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <div
           class="ant-select-selection-search"
-          style="width:0"
+          style="width: 0px;"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -1896,25 +1916,25 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
     </div>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-selected="true"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           gold
         </div>
         <div
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           lime
@@ -1922,16 +1942,16 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="true"
@@ -1946,7 +1966,7 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 >
                   <span
@@ -2005,7 +2025,7 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 >
                   <span
@@ -2038,7 +2058,7 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -2067,26 +2087,26 @@ exports[`renders components/select/demo/custom-tag-render.tsx extend context cor
 exports[`renders components/select/demo/debug.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-horizontal ant-space-align-center"
-  style="flex-wrap:wrap;margin-bottom:-8px;width:500px;position:relative;z-index:1;border:1px solid red;background-color:#fff"
+  style="flex-wrap: wrap; margin-bottom: -8px; width: 500px; position: relative; z-index: 1; border: 1px solid red; background-color: rgb(255, 255, 255);"
 >
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <input
       class="ant-input"
-      style="width:100px"
+      style="width: 100px;"
       type="text"
       value="222"
     />
   </div>
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-show-arrow ant-select-show-search"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -2095,13 +2115,15 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             role="combobox"
             type="search"
             value=""
@@ -2114,19 +2136,19 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Jack"
               aria-selected="false"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               jack
@@ -2134,7 +2156,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
             <div
               aria-label="Lucy"
               aria-selected="false"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               lucy
@@ -2142,16 +2164,16 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="false"
@@ -2166,7 +2188,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -2183,7 +2205,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -2200,7 +2222,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -2217,7 +2239,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -2234,7 +2256,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -2247,7 +2269,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -2274,11 +2296,11 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
   </div>
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -2288,7 +2310,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
         >
           <div
             class="ant-select-selection-overflow-item"
-            style="opacity:1"
+            style="opacity: 1;"
           >
             <span
               class="ant-select-selection-item"
@@ -2302,7 +2324,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
               <span
                 aria-hidden="true"
                 class="ant-select-selection-item-remove"
-                style="user-select:none;-webkit-user-select:none"
+                style="user-select: none;"
                 unselectable="on"
               >
                 <span
@@ -2329,23 +2351,25 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
           </div>
           <div
             class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-            style="opacity:1"
+            style="opacity: 1;"
           >
             <div
               class="ant-select-selection-search"
-              style="width:0"
+              style="width: 0px;"
             >
               <input
-                aria-activedescendant="undefined_list_0"
+                aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
                 aria-autocomplete="list"
-                aria-controls="undefined_list"
+                aria-controls="rc_select_TEST_OR_SSR_list"
+                aria-expanded="false"
                 aria-haspopup="listbox"
-                aria-owns="undefined_list"
+                aria-owns="rc_select_TEST_OR_SSR_list"
                 autocomplete="off"
                 class="ant-select-selection-search-input"
+                id="rc_select_TEST_OR_SSR"
                 readonly=""
                 role="combobox"
-                style="opacity:0"
+                style="opacity: 0;"
                 type="search"
                 unselectable="on"
                 value=""
@@ -2360,19 +2384,19 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
         </div>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Jack"
               aria-selected="false"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               jack
@@ -2380,7 +2404,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               lucy
@@ -2388,16 +2412,16 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="false"
@@ -2423,7 +2447,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -2489,7 +2513,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -2516,7 +2540,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
   </div>
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <span
       class="debug-align"
@@ -2526,7 +2550,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
   </div>
   <div
     class="ant-space-item"
-    style="padding-bottom:8px"
+    style="padding-bottom: 8px;"
   >
     <button
       class="ant-btn ant-btn-default"
@@ -2543,7 +2567,7 @@ exports[`renders components/select/demo/debug.tsx extend context correctly 1`] =
 exports[`renders components/select/demo/hide-selected.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-select-selector"
@@ -2553,23 +2577,25 @@ exports[`renders components/select/demo/hide-selected.tsx extend context correct
     >
       <div
         class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <div
           class="ant-select-selection-search"
-          style="width:0"
+          style="width: 0px;"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -2589,19 +2615,19 @@ exports[`renders components/select/demo/hide-selected.tsx extend context correct
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-label="Apples"
           aria-selected="false"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           Apples
@@ -2609,7 +2635,7 @@ exports[`renders components/select/demo/hide-selected.tsx extend context correct
         <div
           aria-label="Nails"
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           Nails
@@ -2617,16 +2643,16 @@ exports[`renders components/select/demo/hide-selected.tsx extend context correct
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="false"
@@ -2681,7 +2707,7 @@ exports[`renders components/select/demo/hide-selected.tsx extend context correct
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -2710,7 +2736,7 @@ exports[`renders components/select/demo/hide-selected.tsx extend context correct
 exports[`renders components/select/demo/label-in-value.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-single ant-select-show-arrow"
-  style="width:120px"
+  style="width: 120px;"
 >
   <div
     class="ant-select-selector"
@@ -2719,16 +2745,18 @@ exports[`renders components/select/demo/label-in-value.tsx extend context correc
       class="ant-select-selection-search"
     >
       <input
-        aria-activedescendant="undefined_list_0"
+        aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
         aria-autocomplete="list"
-        aria-controls="undefined_list"
+        aria-controls="rc_select_TEST_OR_SSR_list"
+        aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="undefined_list"
+        aria-owns="rc_select_TEST_OR_SSR_list"
         autocomplete="off"
         class="ant-select-selection-search-input"
+        id="rc_select_TEST_OR_SSR"
         readonly=""
         role="combobox"
-        style="opacity:0"
+        style="opacity: 0;"
         type="search"
         unselectable="on"
         value=""
@@ -2742,19 +2770,19 @@ exports[`renders components/select/demo/label-in-value.tsx extend context correc
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-label="Jack (100)"
           aria-selected="false"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           jack
@@ -2762,7 +2790,7 @@ exports[`renders components/select/demo/label-in-value.tsx extend context correc
         <div
           aria-label="Lucy (101)"
           aria-selected="true"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           lucy
@@ -2770,16 +2798,16 @@ exports[`renders components/select/demo/label-in-value.tsx extend context correc
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="false"
@@ -2794,7 +2822,7 @@ exports[`renders components/select/demo/label-in-value.tsx extend context correc
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -2811,7 +2839,7 @@ exports[`renders components/select/demo/label-in-value.tsx extend context correc
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -2824,7 +2852,7 @@ exports[`renders components/select/demo/label-in-value.tsx extend context correc
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -2853,15 +2881,15 @@ exports[`renders components/select/demo/label-in-value.tsx extend context correc
 exports[`renders components/select/demo/multiple.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-vertical"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-space-item"
-    style="margin-bottom:8px"
+    style="margin-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-multiple ant-select-allow-clear ant-select-show-arrow ant-select-show-search"
-      style="width:100%"
+      style="width: 100%;"
     >
       <div
         class="ant-select-selector"
@@ -2871,7 +2899,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
         >
           <div
             class="ant-select-selection-overflow-item"
-            style="opacity:1"
+            style="opacity: 1;"
           >
             <span
               class="ant-select-selection-item"
@@ -2885,7 +2913,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
               <span
                 aria-hidden="true"
                 class="ant-select-selection-item-remove"
-                style="user-select:none;-webkit-user-select:none"
+                style="user-select: none;"
                 unselectable="on"
               >
                 <span
@@ -2912,7 +2940,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
           </div>
           <div
             class="ant-select-selection-overflow-item"
-            style="opacity:1"
+            style="opacity: 1;"
           >
             <span
               class="ant-select-selection-item"
@@ -2926,7 +2954,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
               <span
                 aria-hidden="true"
                 class="ant-select-selection-item-remove"
-                style="user-select:none;-webkit-user-select:none"
+                style="user-select: none;"
                 unselectable="on"
               >
                 <span
@@ -2953,23 +2981,25 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
           </div>
           <div
             class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-            style="opacity:1"
+            style="opacity: 1;"
           >
             <div
               class="ant-select-selection-search"
-              style="width:0"
+              style="width: 0px;"
             >
               <input
-                aria-activedescendant="undefined_list_0"
+                aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
                 aria-autocomplete="list"
-                aria-controls="undefined_list"
+                aria-controls="rc_select_TEST_OR_SSR_list"
+                aria-expanded="false"
                 aria-haspopup="listbox"
-                aria-owns="undefined_list"
+                aria-owns="rc_select_TEST_OR_SSR_list"
                 autocomplete="off"
                 class="ant-select-selection-search-input"
+                id="rc_select_TEST_OR_SSR"
                 readonly=""
                 role="combobox"
-                style="opacity:0"
+                style="opacity: 0;"
                 type="search"
                 unselectable="on"
                 value=""
@@ -2984,19 +3014,19 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
         </div>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="a10"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               a10
@@ -3004,7 +3034,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
             <div
               aria-label="b11"
               aria-selected="false"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               b11
@@ -3012,16 +3042,16 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -3036,7 +3066,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -3084,7 +3114,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -3370,7 +3400,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -3396,7 +3426,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
       <span
         aria-hidden="true"
         class="ant-select-clear"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -3426,7 +3456,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
   >
     <div
       class="ant-select ant-select-multiple ant-select-show-arrow ant-select-disabled ant-select-show-search"
-      style="width:100%"
+      style="width: 100%;"
     >
       <div
         class="ant-select-selector"
@@ -3436,7 +3466,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
         >
           <div
             class="ant-select-selection-overflow-item"
-            style="opacity:1"
+            style="opacity: 1;"
           >
             <span
               class="ant-select-selection-item"
@@ -3451,7 +3481,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
           </div>
           <div
             class="ant-select-selection-overflow-item"
-            style="opacity:1"
+            style="opacity: 1;"
           >
             <span
               class="ant-select-selection-item"
@@ -3466,25 +3496,26 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
           </div>
           <div
             class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-            style="opacity:1"
+            style="opacity: 1;"
           >
             <div
               class="ant-select-selection-search"
-              style="width:0"
+              style="width: 0px;"
             >
               <input
-                aria-activedescendant="undefined_list_0"
+                aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
                 aria-autocomplete="list"
-                aria-controls="undefined_list"
+                aria-controls="rc_select_TEST_OR_SSR_list"
                 aria-expanded="false"
                 aria-haspopup="listbox"
-                aria-owns="undefined_list"
+                aria-owns="rc_select_TEST_OR_SSR_list"
                 autocomplete="off"
                 class="ant-select-selection-search-input"
                 disabled=""
+                id="rc_select_TEST_OR_SSR"
                 readonly=""
                 role="combobox"
-                style="opacity:0"
+                style="opacity: 0;"
                 type="search"
                 unselectable="on"
                 value=""
@@ -3499,19 +3530,19 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
         </div>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="a10"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               a10
@@ -3519,7 +3550,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
             <div
               aria-label="b11"
               aria-selected="false"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               b11
@@ -3527,16 +3558,16 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -3551,7 +3582,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -3599,7 +3630,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -3885,7 +3916,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -3916,7 +3947,7 @@ exports[`renders components/select/demo/multiple.tsx extend context correctly 1`
 exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-single ant-select-show-arrow"
-  style="width:200px"
+  style="width: 200px;"
 >
   <div
     class="ant-select-selector"
@@ -3925,16 +3956,18 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
       class="ant-select-selection-search"
     >
       <input
-        aria-activedescendant="undefined_list_0"
+        aria-activedescendant="rc_select_TEST_OR_SSR_list_1"
         aria-autocomplete="list"
-        aria-controls="undefined_list"
+        aria-controls="rc_select_TEST_OR_SSR_list"
+        aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="undefined_list"
+        aria-owns="rc_select_TEST_OR_SSR_list"
         autocomplete="off"
         class="ant-select-selection-search-input"
+        id="rc_select_TEST_OR_SSR"
         readonly=""
         role="combobox"
-        style="opacity:0"
+        style="opacity: 0;"
         type="search"
         unselectable="on"
         value=""
@@ -3948,24 +3981,24 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-selected="false"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="presentation"
         />
         <div
           aria-label="Jack"
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           jack
@@ -3973,7 +4006,7 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
         <div
           aria-label="Lucy"
           aria-selected="true"
-          id="undefined_list_2"
+          id="rc_select_TEST_OR_SSR_list_2"
           role="option"
         >
           lucy
@@ -3981,16 +4014,16 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 class="ant-select-item ant-select-item-group"
@@ -4011,7 +4044,7 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -4028,7 +4061,7 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -4051,7 +4084,7 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -4064,7 +4097,7 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -4093,15 +4126,15 @@ exports[`renders components/select/demo/optgroup.tsx extend context correctly 1`
 exports[`renders components/select/demo/option-label-center.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-horizontal ant-space-align-center"
-  style="flex-wrap:wrap;margin-bottom:-8px"
+  style="flex-wrap: wrap; margin-bottom: -8px;"
 >
   <div
     class="ant-space-item"
-    style="padding-bottom:8px"
+    style="padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-allow-clear ant-select-show-arrow"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -4110,16 +4143,18 @@ exports[`renders components/select/demo/option-label-center.tsx extend context c
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -4133,25 +4168,25 @@ exports[`renders components/select/demo/option-label-center.tsx extend context c
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-selected="false"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               long
             </div>
             <div
               aria-selected="false"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               short
@@ -4159,16 +4194,16 @@ exports[`renders components/select/demo/option-label-center.tsx extend context c
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="false"
@@ -4186,7 +4221,7 @@ exports[`renders components/select/demo/option-label-center.tsx extend context c
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -4206,7 +4241,7 @@ exports[`renders components/select/demo/option-label-center.tsx extend context c
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -4219,7 +4254,7 @@ exports[`renders components/select/demo/option-label-center.tsx extend context c
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -4245,7 +4280,7 @@ exports[`renders components/select/demo/option-label-center.tsx extend context c
       <span
         aria-hidden="true"
         class="ant-select-clear"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -4276,7 +4311,7 @@ exports[`renders components/select/demo/option-label-center.tsx extend context c
 exports[`renders components/select/demo/option-label-prop.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-select-selector"
@@ -4286,7 +4321,7 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
     >
       <div
         class="ant-select-selection-overflow-item"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <span
           class="ant-select-selection-item"
@@ -4300,7 +4335,7 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
           <span
             aria-hidden="true"
             class="ant-select-selection-item-remove"
-            style="user-select:none;-webkit-user-select:none"
+            style="user-select: none;"
             unselectable="on"
           >
             <span
@@ -4327,23 +4362,25 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
       </div>
       <div
         class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <div
           class="ant-select-selection-search"
-          style="width:0"
+          style="width: 0px;"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -4358,25 +4395,25 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
     </div>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-selected="true"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           china
         </div>
         <div
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           usa
@@ -4384,16 +4421,16 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="true"
@@ -4408,7 +4445,7 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
                   >
                     <div
                       class="ant-space-item"
-                      style="margin-right:8px"
+                      style="margin-right: 8px;"
                     >
                       <span
                         aria-label="China"
@@ -4427,7 +4464,7 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 >
                   <span
@@ -4464,7 +4501,7 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
                   >
                     <div
                       class="ant-space-item"
-                      style="margin-right:8px"
+                      style="margin-right: 8px;"
                     >
                       <span
                         aria-label="USA"
@@ -4494,7 +4531,7 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
                   >
                     <div
                       class="ant-space-item"
-                      style="margin-right:8px"
+                      style="margin-right: 8px;"
                     >
                       <span
                         aria-label="Japan"
@@ -4524,7 +4561,7 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
                   >
                     <div
                       class="ant-space-item"
-                      style="margin-right:8px"
+                      style="margin-right: 8px;"
                     >
                       <span
                         aria-label="Korea"
@@ -4550,7 +4587,7 @@ exports[`renders components/select/demo/option-label-prop.tsx extend context cor
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -4663,7 +4700,7 @@ Array [
   <br />,
   <div
     class="ant-select ant-select-single ant-select-show-arrow"
-    style="width:120px"
+    style="width: 120px;"
   >
     <div
       class="ant-select-selector"
@@ -4672,16 +4709,18 @@ Array [
         class="ant-select-selection-search"
       >
         <input
-          aria-activedescendant="undefined_list_0"
+          aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
           aria-autocomplete="list"
-          aria-controls="undefined_list"
+          aria-controls="rc_select_TEST_OR_SSR_list"
+          aria-expanded="false"
           aria-haspopup="listbox"
-          aria-owns="undefined_list"
+          aria-owns="rc_select_TEST_OR_SSR_list"
           autocomplete="off"
           class="ant-select-selection-search-input"
+          id="rc_select_TEST_OR_SSR"
           readonly=""
           role="combobox"
-          style="opacity:0"
+          style="opacity: 0;"
           type="search"
           unselectable="on"
           value=""
@@ -4695,29 +4734,29 @@ Array [
       </span>
     </div>
     <div
-      class="ant-select-dropdown ant-select-dropdown-placement-topLeft"
-      style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+      class="ant-select-dropdown ant-slide-down-appear ant-slide-down-appear-prepare ant-slide-down ant-select-dropdown-placement-topLeft"
+      style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
     >
       <div>
         <div
           class="rc-virtual-list"
-          style="position:relative"
+          style="position: relative;"
         >
           <div
             class="rc-virtual-list-holder"
-            style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+            style="max-height: 256px; overflow-y: auto;"
           >
             <div>
               <div
                 class="rc-virtual-list-holder-inner"
-                id="undefined_list"
+                id="rc_select_TEST_OR_SSR_list"
                 role="listbox"
-                style="display:flex;flex-direction:column"
+                style="display: flex; flex-direction: column;"
               >
                 <div
                   aria-selected="true"
                   class="ant-select-item ant-select-item-option ant-select-item-option-active ant-select-item-option-selected"
-                  id="undefined_list_0"
+                  id="rc_select_TEST_OR_SSR_list_0"
                   role="option"
                   title="HangZhou #310000"
                 >
@@ -4729,14 +4768,14 @@ Array [
                   <span
                     aria-hidden="true"
                     class="ant-select-item-option-state"
-                    style="user-select:none;-webkit-user-select:none"
+                    style="user-select: none;"
                     unselectable="on"
                   />
                 </div>
                 <div
                   aria-selected="false"
                   class="ant-select-item ant-select-item-option"
-                  id="undefined_list_1"
+                  id="rc_select_TEST_OR_SSR_list_1"
                   role="option"
                   title="NingBo #315000"
                 >
@@ -4748,14 +4787,14 @@ Array [
                   <span
                     aria-hidden="true"
                     class="ant-select-item-option-state"
-                    style="user-select:none;-webkit-user-select:none"
+                    style="user-select: none;"
                     unselectable="on"
                   />
                 </div>
                 <div
                   aria-selected="false"
                   class="ant-select-item ant-select-item-option"
-                  id="undefined_list_2"
+                  id="rc_select_TEST_OR_SSR_list_2"
                   role="option"
                   title="WenZhou #325000"
                 >
@@ -4767,7 +4806,7 @@ Array [
                   <span
                     aria-hidden="true"
                     class="ant-select-item-option-state"
-                    style="user-select:none;-webkit-user-select:none"
+                    style="user-select: none;"
                     unselectable="on"
                   />
                 </div>
@@ -4780,7 +4819,7 @@ Array [
     <span
       aria-hidden="true"
       class="ant-select-arrow"
-      style="user-select:none;-webkit-user-select:none"
+      style="user-select: none;"
       unselectable="on"
     >
       <span
@@ -4810,15 +4849,15 @@ Array [
 exports[`renders components/select/demo/responsive.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-vertical"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-space-item"
-    style="margin-bottom:8px"
+    style="margin-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-      style="width:100%"
+      style="width: 100%;"
     >
       <div
         class="ant-select-selector"
@@ -4829,7 +4868,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
           <div
             aria-hidden="true"
             class="ant-select-selection-overflow-item ant-select-selection-overflow-item-rest"
-            style="opacity:0;height:0;overflow-y:hidden;order:9007199254740991;pointer-events:none;position:absolute"
+            style="opacity: 0; height: 0px; overflow-y: hidden; order: 9007199254740991; pointer-events: none; position: absolute;"
           >
             <span
               class="ant-select-selection-item"
@@ -4844,23 +4883,25 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
           </div>
           <div
             class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-            style="opacity:1;order:0"
+            style="opacity: 1; order: 0;"
           >
             <div
               class="ant-select-selection-search"
-              style="width:0"
+              style="width: 0px;"
             >
               <input
-                aria-activedescendant="undefined_list_0"
+                aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
                 aria-autocomplete="list"
-                aria-controls="undefined_list"
+                aria-controls="rc_select_TEST_OR_SSR_list"
+                aria-expanded="false"
                 aria-haspopup="listbox"
-                aria-owns="undefined_list"
+                aria-owns="rc_select_TEST_OR_SSR_list"
                 autocomplete="off"
                 class="ant-select-selection-search-input"
+                id="rc_select_TEST_OR_SSR"
                 readonly=""
                 role="combobox"
-                style="opacity:0"
+                style="opacity: 0;"
                 type="search"
                 unselectable="on"
                 value=""
@@ -4875,19 +4916,19 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
         </div>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Long Label: a10"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               a10
@@ -4895,7 +4936,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
             <div
               aria-label="Long Label: b11"
               aria-selected="false"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               b11
@@ -4903,16 +4944,16 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -4927,7 +4968,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -4975,7 +5016,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5056,7 +5097,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5104,7 +5145,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5141,7 +5182,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5339,7 +5380,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -5369,7 +5410,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
   >
     <div
       class="ant-select ant-select-multiple ant-select-show-arrow ant-select-disabled ant-select-show-search"
-      style="width:100%"
+      style="width: 100%;"
     >
       <div
         class="ant-select-selector"
@@ -5380,7 +5421,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
           <div
             aria-hidden="true"
             class="ant-select-selection-overflow-item ant-select-selection-overflow-item-rest"
-            style="opacity:0;height:0;overflow-y:hidden;order:9007199254740991;pointer-events:none;position:absolute"
+            style="opacity: 0; height: 0px; overflow-y: hidden; order: 9007199254740991; pointer-events: none; position: absolute;"
           >
             <span
               class="ant-select-selection-item"
@@ -5395,25 +5436,26 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
           </div>
           <div
             class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-            style="opacity:1;order:0"
+            style="opacity: 1; order: 0;"
           >
             <div
               class="ant-select-selection-search"
-              style="width:0"
+              style="width: 0px;"
             >
               <input
-                aria-activedescendant="undefined_list_0"
+                aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
                 aria-autocomplete="list"
-                aria-controls="undefined_list"
+                aria-controls="rc_select_TEST_OR_SSR_list"
                 aria-expanded="false"
                 aria-haspopup="listbox"
-                aria-owns="undefined_list"
+                aria-owns="rc_select_TEST_OR_SSR_list"
                 autocomplete="off"
                 class="ant-select-selection-search-input"
                 disabled=""
+                id="rc_select_TEST_OR_SSR"
                 readonly=""
                 role="combobox"
-                style="opacity:0"
+                style="opacity: 0;"
                 type="search"
                 unselectable="on"
                 value=""
@@ -5428,19 +5470,19 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
         </div>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Long Label: a10"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               a10
@@ -5448,7 +5490,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
             <div
               aria-label="Long Label: b11"
               aria-selected="false"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               b11
@@ -5456,16 +5498,16 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -5480,7 +5522,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5528,7 +5570,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5609,7 +5651,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5657,7 +5699,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5694,7 +5736,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     >
                       <span
@@ -5892,7 +5934,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -5923,6 +5965,7 @@ exports[`renders components/select/demo/responsive.tsx extend context correctly 
 exports[`renders components/select/demo/search.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-single ant-select-show-arrow ant-select-show-search"
+  style="width: 160px;"
 >
   <div
     class="ant-select-selector"
@@ -5931,13 +5974,15 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
       class="ant-select-selection-search"
     >
       <input
-        aria-activedescendant="undefined_list_0"
+        aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
         aria-autocomplete="list"
-        aria-controls="undefined_list"
+        aria-controls="rc_select_TEST_OR_SSR_list"
+        aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="undefined_list"
+        aria-owns="rc_select_TEST_OR_SSR_list"
         autocomplete="off"
         class="ant-select-selection-search-input"
+        id="rc_select_TEST_OR_SSR"
         role="combobox"
         type="search"
         value=""
@@ -5950,19 +5995,19 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-label="Jack"
           aria-selected="false"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           jack
@@ -5970,7 +6015,7 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
         <div
           aria-label="Lucy"
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           lucy
@@ -5978,16 +6023,16 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="false"
@@ -6002,7 +6047,7 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6019,7 +6064,7 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6036,7 +6081,7 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6049,7 +6094,7 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -6078,7 +6123,7 @@ exports[`renders components/select/demo/search.tsx extend context correctly 1`] 
 exports[`renders components/select/demo/search-box.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-single ant-select-show-search"
-  style="width:200px"
+  style="width: 200px;"
 >
   <div
     class="ant-select-selector"
@@ -6087,13 +6132,15 @@ exports[`renders components/select/demo/search-box.tsx extend context correctly 
       class="ant-select-selection-search"
     >
       <input
-        aria-activedescendant="undefined_list_0"
+        aria-activedescendant="rc_select_TEST_OR_SSR_list_-1"
         aria-autocomplete="list"
-        aria-controls="undefined_list"
+        aria-controls="rc_select_TEST_OR_SSR_list"
+        aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="undefined_list"
+        aria-owns="rc_select_TEST_OR_SSR_list"
         autocomplete="off"
         class="ant-select-selection-search-input"
+        id="rc_select_TEST_OR_SSR"
         role="combobox"
         type="search"
         value=""
@@ -6106,13 +6153,13 @@ exports[`renders components/select/demo/search-box.tsx extend context correctly 
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-empty ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-empty ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
         class="ant-select-item-empty"
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
       />
     </div>
@@ -6123,7 +6170,7 @@ exports[`renders components/select/demo/search-box.tsx extend context correctly 
 exports[`renders components/select/demo/search-sort.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-single ant-select-show-arrow ant-select-show-search"
-  style="width:200px"
+  style="width: 200px;"
 >
   <div
     class="ant-select-selector"
@@ -6132,13 +6179,15 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
       class="ant-select-selection-search"
     >
       <input
-        aria-activedescendant="undefined_list_0"
+        aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
         aria-autocomplete="list"
-        aria-controls="undefined_list"
+        aria-controls="rc_select_TEST_OR_SSR_list"
+        aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="undefined_list"
+        aria-owns="rc_select_TEST_OR_SSR_list"
         autocomplete="off"
         class="ant-select-selection-search-input"
+        id="rc_select_TEST_OR_SSR"
         role="combobox"
         type="search"
         value=""
@@ -6151,19 +6200,19 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-label="Cancelled"
           aria-selected="false"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           6
@@ -6171,7 +6220,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
         <div
           aria-label="Closed"
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           2
@@ -6179,16 +6228,16 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="false"
@@ -6203,7 +6252,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6220,7 +6269,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6237,7 +6286,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6254,7 +6303,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6271,7 +6320,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6288,7 +6337,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
                 <span
                   aria-hidden="true"
                   class="ant-select-item-option-state"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 />
               </div>
@@ -6301,7 +6350,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -6330,7 +6379,7 @@ exports[`renders components/select/demo/search-sort.tsx extend context correctly
 exports[`renders components/select/demo/select-users.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-select-selector"
@@ -6340,23 +6389,25 @@ exports[`renders components/select/demo/select-users.tsx extend context correctl
     >
       <div
         class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <div
           class="ant-select-selection-search"
-          style="width:0"
+          style="width: 0px;"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_-1"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -6376,13 +6427,13 @@ exports[`renders components/select/demo/select-users.tsx extend context correctl
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-empty ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-empty ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
         class="ant-select-item-empty"
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
       />
     </div>
@@ -6390,7 +6441,7 @@ exports[`renders components/select/demo/select-users.tsx extend context correctl
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span
@@ -6484,15 +6535,15 @@ Array [
   <br />,
   <div
     class="ant-space ant-space-vertical"
-    style="width:100%"
+    style="width: 100%;"
   >
     <div
       class="ant-space-item"
-      style="margin-bottom:8px"
+      style="margin-bottom: 8px;"
     >
       <div
         class="ant-select ant-select-single ant-select-show-arrow"
-        style="width:200px"
+        style="width: 200px;"
       >
         <div
           class="ant-select-selector"
@@ -6501,16 +6552,18 @@ Array [
             class="ant-select-selection-search"
           >
             <input
-              aria-activedescendant="undefined_list_0"
+              aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
               aria-autocomplete="list"
-              aria-controls="undefined_list"
+              aria-controls="rc_select_TEST_OR_SSR_list"
+              aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="undefined_list"
+              aria-owns="rc_select_TEST_OR_SSR_list"
               autocomplete="off"
               class="ant-select-selection-search-input"
+              id="rc_select_TEST_OR_SSR"
               readonly=""
               role="combobox"
-              style="opacity:0"
+              style="opacity: 0;"
               type="search"
               unselectable="on"
               value=""
@@ -6524,19 +6577,19 @@ Array [
           </span>
         </div>
         <div
-          class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-          style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+          class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+          style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
         >
           <div>
             <div
-              id="undefined_list"
+              id="rc_select_TEST_OR_SSR_list"
               role="listbox"
-              style="height:0;width:0;overflow:hidden"
+              style="height: 0px; width: 0px; overflow: hidden;"
             >
               <div
                 aria-label="a10"
                 aria-selected="false"
-                id="undefined_list_0"
+                id="rc_select_TEST_OR_SSR_list_0"
                 role="option"
               >
                 a10
@@ -6544,7 +6597,7 @@ Array [
               <div
                 aria-label="b11"
                 aria-selected="false"
-                id="undefined_list_1"
+                id="rc_select_TEST_OR_SSR_list_1"
                 role="option"
               >
                 b11
@@ -6552,16 +6605,16 @@ Array [
             </div>
             <div
               class="rc-virtual-list"
-              style="position:relative"
+              style="position: relative;"
             >
               <div
                 class="rc-virtual-list-holder"
-                style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+                style="max-height: 256px; overflow-y: auto;"
               >
                 <div>
                   <div
                     class="rc-virtual-list-holder-inner"
-                    style="display:flex;flex-direction:column"
+                    style="display: flex; flex-direction: column;"
                   >
                     <div
                       aria-selected="false"
@@ -6576,7 +6629,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6593,7 +6646,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6610,7 +6663,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6627,7 +6680,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6644,7 +6697,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6661,7 +6714,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6678,7 +6731,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6695,7 +6748,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6712,7 +6765,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6729,7 +6782,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6746,7 +6799,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6763,7 +6816,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6780,7 +6833,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6797,7 +6850,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6814,7 +6867,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6831,7 +6884,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6848,7 +6901,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6865,7 +6918,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6882,7 +6935,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6899,7 +6952,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6916,7 +6969,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6933,7 +6986,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6950,7 +7003,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6967,7 +7020,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -6984,7 +7037,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -7001,7 +7054,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       />
                     </div>
@@ -7014,7 +7067,7 @@ Array [
         <span
           aria-hidden="true"
           class="ant-select-arrow"
-          style="user-select:none;-webkit-user-select:none"
+          style="user-select: none;"
           unselectable="on"
         >
           <span
@@ -7041,11 +7094,11 @@ Array [
     </div>
     <div
       class="ant-space-item"
-      style="margin-bottom:8px"
+      style="margin-bottom: 8px;"
     >
       <div
         class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-        style="width:100%"
+        style="width: 100%;"
       >
         <div
           class="ant-select-selector"
@@ -7055,7 +7108,7 @@ Array [
           >
             <div
               class="ant-select-selection-overflow-item"
-              style="opacity:1"
+              style="opacity: 1;"
             >
               <span
                 class="ant-select-selection-item"
@@ -7069,7 +7122,7 @@ Array [
                 <span
                   aria-hidden="true"
                   class="ant-select-selection-item-remove"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 >
                   <span
@@ -7096,7 +7149,7 @@ Array [
             </div>
             <div
               class="ant-select-selection-overflow-item"
-              style="opacity:1"
+              style="opacity: 1;"
             >
               <span
                 class="ant-select-selection-item"
@@ -7110,7 +7163,7 @@ Array [
                 <span
                   aria-hidden="true"
                   class="ant-select-selection-item-remove"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 >
                   <span
@@ -7137,23 +7190,25 @@ Array [
             </div>
             <div
               class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-              style="opacity:1"
+              style="opacity: 1;"
             >
               <div
                 class="ant-select-selection-search"
-                style="width:0"
+                style="width: 0px;"
               >
                 <input
-                  aria-activedescendant="undefined_list_0"
+                  aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
                   aria-autocomplete="list"
-                  aria-controls="undefined_list"
+                  aria-controls="rc_select_TEST_OR_SSR_list"
+                  aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-owns="undefined_list"
+                  aria-owns="rc_select_TEST_OR_SSR_list"
                   autocomplete="off"
                   class="ant-select-selection-search-input"
+                  id="rc_select_TEST_OR_SSR"
                   readonly=""
                   role="combobox"
-                  style="opacity:0"
+                  style="opacity: 0;"
                   type="search"
                   unselectable="on"
                   value=""
@@ -7168,19 +7223,19 @@ Array [
           </div>
         </div>
         <div
-          class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-          style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+          class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+          style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
         >
           <div>
             <div
-              id="undefined_list"
+              id="rc_select_TEST_OR_SSR_list"
               role="listbox"
-              style="height:0;width:0;overflow:hidden"
+              style="height: 0px; width: 0px; overflow: hidden;"
             >
               <div
                 aria-label="a10"
                 aria-selected="true"
-                id="undefined_list_0"
+                id="rc_select_TEST_OR_SSR_list_0"
                 role="option"
               >
                 a10
@@ -7188,7 +7243,7 @@ Array [
               <div
                 aria-label="b11"
                 aria-selected="false"
-                id="undefined_list_1"
+                id="rc_select_TEST_OR_SSR_list_1"
                 role="option"
               >
                 b11
@@ -7196,16 +7251,16 @@ Array [
             </div>
             <div
               class="rc-virtual-list"
-              style="position:relative"
+              style="position: relative;"
             >
               <div
                 class="rc-virtual-list-holder"
-                style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+                style="max-height: 256px; overflow-y: auto;"
               >
                 <div>
                   <div
                     class="rc-virtual-list-holder-inner"
-                    style="display:flex;flex-direction:column"
+                    style="display: flex; flex-direction: column;"
                   >
                     <div
                       aria-selected="true"
@@ -7220,7 +7275,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       >
                         <span
@@ -7268,7 +7323,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       >
                         <span
@@ -7554,7 +7609,7 @@ Array [
         <span
           aria-hidden="true"
           class="ant-select-arrow"
-          style="user-select:none;-webkit-user-select:none"
+          style="user-select: none;"
           unselectable="on"
         >
           <span
@@ -7584,7 +7639,7 @@ Array [
     >
       <div
         class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-        style="width:100%"
+        style="width: 100%;"
       >
         <div
           class="ant-select-selector"
@@ -7594,7 +7649,7 @@ Array [
           >
             <div
               class="ant-select-selection-overflow-item"
-              style="opacity:1"
+              style="opacity: 1;"
             >
               <span
                 class="ant-select-selection-item"
@@ -7608,7 +7663,7 @@ Array [
                 <span
                   aria-hidden="true"
                   class="ant-select-selection-item-remove"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 >
                   <span
@@ -7635,7 +7690,7 @@ Array [
             </div>
             <div
               class="ant-select-selection-overflow-item"
-              style="opacity:1"
+              style="opacity: 1;"
             >
               <span
                 class="ant-select-selection-item"
@@ -7649,7 +7704,7 @@ Array [
                 <span
                   aria-hidden="true"
                   class="ant-select-selection-item-remove"
-                  style="user-select:none;-webkit-user-select:none"
+                  style="user-select: none;"
                   unselectable="on"
                 >
                   <span
@@ -7676,20 +7731,22 @@ Array [
             </div>
             <div
               class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-              style="opacity:1"
+              style="opacity: 1;"
             >
               <div
                 class="ant-select-selection-search"
-                style="width:0"
+                style="width: 0px;"
               >
                 <input
-                  aria-activedescendant="undefined_list_0"
+                  aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
                   aria-autocomplete="list"
-                  aria-controls="undefined_list"
+                  aria-controls="rc_select_TEST_OR_SSR_list"
+                  aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-owns="undefined_list"
+                  aria-owns="rc_select_TEST_OR_SSR_list"
                   autocomplete="off"
                   class="ant-select-selection-search-input"
+                  id="rc_select_TEST_OR_SSR"
                   role="combobox"
                   type="search"
                   value=""
@@ -7704,19 +7761,19 @@ Array [
           </div>
         </div>
         <div
-          class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-          style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+          class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+          style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
         >
           <div>
             <div
-              id="undefined_list"
+              id="rc_select_TEST_OR_SSR_list"
               role="listbox"
-              style="height:0;width:0;overflow:hidden"
+              style="height: 0px; width: 0px; overflow: hidden;"
             >
               <div
                 aria-label="a10"
                 aria-selected="true"
-                id="undefined_list_0"
+                id="rc_select_TEST_OR_SSR_list_0"
                 role="option"
               >
                 a10
@@ -7724,7 +7781,7 @@ Array [
               <div
                 aria-label="b11"
                 aria-selected="false"
-                id="undefined_list_1"
+                id="rc_select_TEST_OR_SSR_list_1"
                 role="option"
               >
                 b11
@@ -7732,16 +7789,16 @@ Array [
             </div>
             <div
               class="rc-virtual-list"
-              style="position:relative"
+              style="position: relative;"
             >
               <div
                 class="rc-virtual-list-holder"
-                style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+                style="max-height: 256px; overflow-y: auto;"
               >
                 <div>
                   <div
                     class="rc-virtual-list-holder-inner"
-                    style="display:flex;flex-direction:column"
+                    style="display: flex; flex-direction: column;"
                   >
                     <div
                       aria-selected="true"
@@ -7756,7 +7813,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       >
                         <span
@@ -7804,7 +7861,7 @@ Array [
                       <span
                         aria-hidden="true"
                         class="ant-select-item-option-state"
-                        style="user-select:none;-webkit-user-select:none"
+                        style="user-select: none;"
                         unselectable="on"
                       >
                         <span
@@ -8090,7 +8147,7 @@ Array [
         <span
           aria-hidden="true"
           class="ant-select-arrow"
-          style="user-select:none;-webkit-user-select:none"
+          style="user-select: none;"
           unselectable="on"
         >
           <span
@@ -8122,15 +8179,15 @@ Array [
 exports[`renders components/select/demo/status.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-vertical"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-space-item"
-    style="margin-bottom:8px"
+    style="margin-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-status-error ant-select-single ant-select-show-arrow"
-      style="width:100%"
+      style="width: 100%;"
     >
       <div
         class="ant-select-selector"
@@ -8139,16 +8196,18 @@ exports[`renders components/select/demo/status.tsx extend context correctly 1`] 
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_-1"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -8159,13 +8218,13 @@ exports[`renders components/select/demo/status.tsx extend context correctly 1`] 
         />
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-empty ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-empty ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
             class="ant-select-item-empty"
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
           >
             <div
@@ -8219,7 +8278,7 @@ exports[`renders components/select/demo/status.tsx extend context correctly 1`] 
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -8249,7 +8308,7 @@ exports[`renders components/select/demo/status.tsx extend context correctly 1`] 
   >
     <div
       class="ant-select ant-select-status-warning ant-select-single ant-select-show-arrow"
-      style="width:100%"
+      style="width: 100%;"
     >
       <div
         class="ant-select-selector"
@@ -8258,16 +8317,18 @@ exports[`renders components/select/demo/status.tsx extend context correctly 1`] 
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_-1"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -8278,13 +8339,13 @@ exports[`renders components/select/demo/status.tsx extend context correctly 1`] 
         />
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-empty ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-empty ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
             class="ant-select-item-empty"
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
           >
             <div
@@ -8338,7 +8399,7 @@ exports[`renders components/select/demo/status.tsx extend context correctly 1`] 
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -8369,15 +8430,15 @@ exports[`renders components/select/demo/status.tsx extend context correctly 1`] 
 exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] = `
 <div
   class="ant-space ant-space-horizontal ant-space-align-center"
-  style="flex-wrap:wrap;margin-bottom:-8px"
+  style="flex-wrap: wrap; margin-bottom: -8px;"
 >
   <div
     class="ant-space-item"
-    style="margin-right:8px;padding-bottom:8px"
+    style="margin-right: 8px; padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-show-arrow"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -8386,16 +8447,18 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -8409,19 +8472,19 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Jack"
               aria-selected="false"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               jack
@@ -8429,7 +8492,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_1"
+              id="rc_select_TEST_OR_SSR_list_1"
               role="option"
             >
               lucy
@@ -8437,16 +8500,16 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="false"
@@ -8461,7 +8524,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -8478,7 +8541,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -8495,7 +8558,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -8512,7 +8575,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -8525,7 +8588,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -8552,11 +8615,11 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
   </div>
   <div
     class="ant-space-item"
-    style="padding-bottom:8px"
+    style="padding-bottom: 8px;"
   >
     <div
       class="ant-select ant-select-single ant-select-show-arrow ant-select-disabled"
-      style="width:120px"
+      style="width: 120px;"
     >
       <div
         class="ant-select-selector"
@@ -8565,18 +8628,19 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
           class="ant-select-selection-search"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
             disabled=""
+            id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
-            style="opacity:0"
+            style="opacity: 0;"
             type="search"
             unselectable="on"
             value=""
@@ -8590,19 +8654,19 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
         </span>
       </div>
       <div
-        class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-        style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+        class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+        style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
       >
         <div>
           <div
-            id="undefined_list"
+            id="rc_select_TEST_OR_SSR_list"
             role="listbox"
-            style="height:0;width:0;overflow:hidden"
+            style="height: 0px; width: 0px; overflow: hidden;"
           >
             <div
               aria-label="Lucy"
               aria-selected="true"
-              id="undefined_list_0"
+              id="rc_select_TEST_OR_SSR_list_0"
               role="option"
             >
               lucy
@@ -8610,16 +8674,16 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
           </div>
           <div
             class="rc-virtual-list"
-            style="position:relative"
+            style="position: relative;"
           >
             <div
               class="rc-virtual-list-holder"
-              style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+              style="max-height: 256px; overflow-y: auto;"
             >
               <div>
                 <div
                   class="rc-virtual-list-holder-inner"
-                  style="display:flex;flex-direction:column"
+                  style="display: flex; flex-direction: column;"
                 >
                   <div
                     aria-selected="true"
@@ -8634,7 +8698,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
                     <span
                       aria-hidden="true"
                       class="ant-select-item-option-state"
-                      style="user-select:none;-webkit-user-select:none"
+                      style="user-select: none;"
                       unselectable="on"
                     />
                   </div>
@@ -8647,7 +8711,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
       <span
         aria-hidden="true"
         class="ant-select-arrow"
-        style="user-select:none;-webkit-user-select:none"
+        style="user-select: none;"
         unselectable="on"
       >
         <span
@@ -8678,7 +8742,7 @@ exports[`renders components/select/demo/suffix.tsx extend context correctly 1`] 
 exports[`renders components/select/demo/tags.tsx extend context correctly 1`] = `
 <div
   class="ant-select ant-select-multiple ant-select-show-arrow ant-select-show-search"
-  style="width:100%"
+  style="width: 100%;"
 >
   <div
     class="ant-select-selector"
@@ -8688,20 +8752,22 @@ exports[`renders components/select/demo/tags.tsx extend context correctly 1`] = 
     >
       <div
         class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
-        style="opacity:1"
+        style="opacity: 1;"
       >
         <div
           class="ant-select-selection-search"
-          style="width:0"
+          style="width: 0px;"
         >
           <input
-            aria-activedescendant="undefined_list_0"
+            aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
             aria-autocomplete="list"
-            aria-controls="undefined_list"
+            aria-controls="rc_select_TEST_OR_SSR_list"
+            aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="undefined_list"
+            aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
             class="ant-select-selection-search-input"
+            id="rc_select_TEST_OR_SSR"
             role="combobox"
             type="search"
             value=""
@@ -8721,19 +8787,19 @@ exports[`renders components/select/demo/tags.tsx extend context correctly 1`] = 
     </span>
   </div>
   <div
-    class="ant-select-dropdown ant-select-dropdown-placement-bottomLeft"
-    style="left:-1000vw;top:-1000vh;box-sizing:border-box"
+    class="ant-select-dropdown ant-slide-up-appear ant-slide-up-appear-prepare ant-slide-up ant-select-dropdown-placement-bottomLeft"
+    style="left: -1000vw; top: -1000vh; box-sizing: border-box;"
   >
     <div>
       <div
-        id="undefined_list"
+        id="rc_select_TEST_OR_SSR_list"
         role="listbox"
-        style="height:0;width:0;overflow:hidden"
+        style="height: 0px; width: 0px; overflow: hidden;"
       >
         <div
           aria-label="a10"
           aria-selected="false"
-          id="undefined_list_0"
+          id="rc_select_TEST_OR_SSR_list_0"
           role="option"
         >
           a10
@@ -8741,7 +8807,7 @@ exports[`renders components/select/demo/tags.tsx extend context correctly 1`] = 
         <div
           aria-label="b11"
           aria-selected="false"
-          id="undefined_list_1"
+          id="rc_select_TEST_OR_SSR_list_1"
           role="option"
         >
           b11
@@ -8749,16 +8815,16 @@ exports[`renders components/select/demo/tags.tsx extend context correctly 1`] = 
       </div>
       <div
         class="rc-virtual-list"
-        style="position:relative"
+        style="position: relative;"
       >
         <div
           class="rc-virtual-list-holder"
-          style="max-height:256px;overflow-y:auto;overflow-anchor:none"
+          style="max-height: 256px; overflow-y: auto;"
         >
           <div>
             <div
               class="rc-virtual-list-holder-inner"
-              style="display:flex;flex-direction:column"
+              style="display: flex; flex-direction: column;"
             >
               <div
                 aria-selected="false"
@@ -9055,7 +9121,7 @@ exports[`renders components/select/demo/tags.tsx extend context correctly 1`] = 
   <span
     aria-hidden="true"
     class="ant-select-arrow"
-    style="user-select:none;-webkit-user-select:none"
+    style="user-select: none;"
     unselectable="on"
   >
     <span

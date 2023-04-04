@@ -1,8 +1,10 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { createCache, StyleProvider } from '@ant-design/cssinjs';
 import glob from 'glob';
+import path from 'path';
 import * as React from 'react';
 import { renderToString } from 'react-dom/server';
+import { render } from '../utils';
 import { TriggerMockContext } from './demoTestContext';
 import { excludeWarning } from './excludeWarning';
 import rootPropsTest from './rootPropsTest';
@@ -19,8 +21,9 @@ export type Options = {
 
 function baseText(doInject: boolean, component: string, options: Options = {}) {
   const files = glob.globSync(`./components/${component}/demo/*.tsx`);
-
   files.forEach((file) => {
+    // to compatible windows path
+    file = file.split(path.sep).join('/');
     const testMethod =
       options.skip === true ||
       (Array.isArray(options.skip) && options.skip.some((c) => file.includes(c)))
@@ -52,9 +55,15 @@ function baseText(doInject: boolean, component: string, options: Options = {}) {
 
         // Demo Test also include `dist` test which is already uglified.
         // We need test this as SSR instead.
-        const html = renderToString(Demo);
-        expect({ type: 'demo', html }).toMatchSnapshot();
+        if (doInject) {
+          const { container } = render(Demo);
+          expect({ type: 'demo', html: container.innerHTML }).toMatchSnapshot();
+        } else {
+          const html = renderToString(Demo);
+          expect({ type: 'demo', html }).toMatchSnapshot();
+        }
 
+        jest.clearAllTimers();
         errSpy.mockRestore();
       },
     );

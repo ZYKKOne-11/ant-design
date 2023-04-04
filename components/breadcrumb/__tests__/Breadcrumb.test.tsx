@@ -291,6 +291,21 @@ describe('Breadcrumb', () => {
     expect(asFragment().firstChild).toMatchSnapshot();
   });
 
+  it('should support Breadcrumb.Item customized menu items key', () => {
+    const key = 'test-key';
+    const { container } = render(
+      <Breadcrumb>
+        <Breadcrumb.Item dropdownProps={{ open: true }} menu={{ items: [{ key }] }}>
+          test-item
+        </Breadcrumb.Item>
+      </Breadcrumb>,
+    );
+
+    const item = container.querySelector<HTMLElement>('.ant-dropdown-menu-item');
+
+    expect(item?.getAttribute('data-menu-id')?.endsWith(key)).toBeTruthy();
+  });
+
   it('should support string `0` and number `0`', () => {
     const { container } = render(
       <Breadcrumb
@@ -328,5 +343,23 @@ describe('Breadcrumb', () => {
     render(<Breadcrumb items={[{ path: '/', title: 'Test' }]} />);
     expect(errSpy).not.toHaveBeenCalled();
     errSpy.mockRestore();
+  });
+
+  it('should use `onClick`', async () => {
+    const onClick = jest.fn();
+    const wrapper = render(<Breadcrumb items={[{ title: 'test', onClick }]} />);
+    const item = await wrapper.findByText('test');
+    item.click();
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
+  it('should use `className`', async () => {
+    const testClassName = 'testClassName';
+    const wrapper = render(<Breadcrumb items={[{ title: 'test', className: testClassName }]} />);
+    const item = await wrapper.findByText('test');
+    expect(item).toHaveClass(testClassName);
+  });
+
+  it('Breadcrumb.Item menu type', () => {
+    expect(<Breadcrumb.Item menu={{ selectable: true }} />).toBeTruthy();
   });
 });
