@@ -4,6 +4,7 @@ import scrollIntoView from 'scroll-into-view-if-needed';
 
 import Anchor from '..';
 import { act, fireEvent, render, waitFakeTimer } from '../../../tests/utils';
+import Button from '../../button';
 import type { AnchorDirection } from '../Anchor';
 
 const { Link } = Anchor;
@@ -18,6 +19,12 @@ let idCounter = 0;
 const getHashUrl = () => `Anchor-API-${idCounter++}`;
 
 jest.mock('scroll-into-view-if-needed', () => jest.fn());
+
+Object.defineProperty(window, 'location', {
+  value: {
+    replace: jest.fn(),
+  },
+});
 
 describe('Anchor Render', () => {
   const getBoundingClientRectMock = jest.spyOn(
@@ -60,12 +67,12 @@ describe('Anchor Render', () => {
         items={[
           {
             key: '1',
-            href: '#components-anchor-demo-basic',
+            href: '#anchor-demo-basic',
             title: 'Item Basic Demo',
           },
           {
             key: '2',
-            href: '#components-anchor-demo-static',
+            href: '#anchor-demo-static',
             title: 'Static demo',
           },
           {
@@ -94,8 +101,8 @@ describe('Anchor Render', () => {
     const linkTitles = Array.from(container.querySelector('.ant-anchor')?.childNodes!).map((n) =>
       (n as HTMLElement).querySelector('.ant-anchor-link-title'),
     );
-    expect((linkTitles[1] as HTMLAnchorElement).href).toContain('#components-anchor-demo-basic');
-    expect((linkTitles[2] as HTMLAnchorElement).href).toContain('#components-anchor-demo-static');
+    expect((linkTitles[1] as HTMLAnchorElement).href).toContain('#anchor-demo-basic');
+    expect((linkTitles[2] as HTMLAnchorElement).href).toContain('#anchor-demo-static');
     expect((linkTitles[3] as HTMLAnchorElement).href).toContain('#api');
     expect(
       (
@@ -120,12 +127,12 @@ describe('Anchor Render', () => {
         items={[
           {
             key: '1',
-            href: '#components-anchor-demo-basic',
+            href: '#anchor-demo-basic',
             title: 'Item Basic Demo',
           },
           {
             key: '2',
-            href: '#components-anchor-demo-static',
+            href: '#anchor-demo-static',
             title: 'Static demo',
           },
           {
@@ -140,8 +147,8 @@ describe('Anchor Render', () => {
     const linkTitles = Array.from(container.querySelector('.ant-anchor')?.childNodes!).map((n) =>
       (n as HTMLElement).querySelector('.ant-anchor-link-title'),
     );
-    expect((linkTitles[1] as HTMLAnchorElement).href).toContain('#components-anchor-demo-basic');
-    expect((linkTitles[2] as HTMLAnchorElement).href).toContain('#components-anchor-demo-static');
+    expect((linkTitles[1] as HTMLAnchorElement).href).toContain('#anchor-demo-basic');
+    expect((linkTitles[2] as HTMLAnchorElement).href).toContain('#anchor-demo-static');
     expect((linkTitles[3] as HTMLAnchorElement).href).toContain('#api');
     expect(asFragment().firstChild).toMatchSnapshot();
   });
@@ -152,7 +159,7 @@ describe('Anchor Render', () => {
         items={[
           {
             key: '1',
-            href: '#components-anchor-demo-basic',
+            href: '#anchor-demo-basic',
             title: 'Item Basic Demo',
           },
         ]}
@@ -163,7 +170,7 @@ describe('Anchor Render', () => {
     expect(container.querySelectorAll('.ant-anchor .ant-anchor-link').length).toBe(1);
     expect(
       (container.querySelector('.ant-anchor .ant-anchor-link-title') as HTMLAnchorElement).href,
-    ).toContain('#components-anchor-demo-basic');
+    ).toContain('#anchor-demo-basic');
     expect(asFragment().firstChild).toMatchSnapshot();
   });
 
@@ -343,6 +350,17 @@ describe('Anchor Render', () => {
     expect(link).toEqual({ href, title });
   });
 
+  it('replaces item href in browser history', () => {
+    const hash = getHashUrl();
+
+    const href = `#${hash}`;
+    const title = hash;
+    const { container } = render(<Anchor replace items={[{ key: hash, href, title }]} />);
+
+    fireEvent.click(container.querySelector(`a[href="${href}"]`)!);
+    expect(window.location.replace).toHaveBeenCalledWith(href);
+  });
+
   it('onChange event', () => {
     const hash1 = getHashUrl();
     const hash2 = getHashUrl();
@@ -363,14 +381,59 @@ describe('Anchor Render', () => {
           },
         ]}
       />,
-      // https://github.com/testing-library/react-testing-library/releases/tag/v13.0.0
-      { legacyRoot: true },
     );
 
     expect(onChange).toHaveBeenCalledTimes(1);
     fireEvent.click(container.querySelector(`a[href="#${hash2}"]`)!);
     expect(onChange).toHaveBeenCalledTimes(2);
     expect(onChange).toHaveBeenLastCalledWith(`#${hash2}`);
+  });
+
+  it('should be used the latest onChange method', () => {
+    const hash1 = getHashUrl();
+    const hash2 = getHashUrl();
+
+    const beforeFn = jest.fn();
+    const afterFn = jest.fn();
+
+    const Demo: React.FC = () => {
+      const [trigger, setTrigger] = useState(false);
+      const onChange = trigger ? afterFn : beforeFn;
+
+      return (
+        <>
+          <Button className="test-button" onClick={() => setTrigger(true)} />
+          <Anchor
+            onChange={onChange}
+            items={[
+              {
+                key: hash1,
+                href: `#${hash1}`,
+                title: hash1,
+              },
+              {
+                key: hash2,
+                href: `#${hash2}`,
+                title: hash2,
+              },
+            ]}
+          />
+        </>
+      );
+    };
+
+    const { container } = render(<Demo />);
+    expect(beforeFn).toHaveBeenCalled();
+    expect(afterFn).not.toHaveBeenCalled();
+
+    beforeFn.mockClear();
+    afterFn.mockClear();
+
+    fireEvent.click(container.querySelector('.test-button')!);
+    fireEvent.click(container.querySelector(`a[href="#${hash2}"]`)!);
+
+    expect(beforeFn).not.toHaveBeenCalled();
+    expect(afterFn).toHaveBeenCalled();
   });
 
   it('handles invalid hash correctly', () => {
@@ -491,13 +554,14 @@ describe('Anchor Render', () => {
             { key: hash2, href: `#${hash2}`, title: hash2 },
           ]}
         />,
-        // https://github.com/testing-library/react-testing-library/releases/tag/v13.0.0
-        { legacyRoot: true },
       );
 
-      expect(onChange).toHaveBeenCalledTimes(1);
+      // Should be 2 times:
+      // 1. ''
+      // 2. hash1 (Since `getCurrentAnchor` still return same hash)
+      const calledTimes = onChange.mock.calls.length;
       fireEvent.click(container.querySelector(`a[href="#${hash2}"]`)!);
-      expect(onChange).toHaveBeenCalledTimes(2);
+      expect(onChange).toHaveBeenCalledTimes(calledTimes + 1);
       expect(onChange).toHaveBeenLastCalledWith(`#${hash2}`);
     });
 
@@ -548,6 +612,22 @@ describe('Anchor Render', () => {
         );
         fireEvent.scroll(window || document);
       }).not.toThrow();
+    });
+
+    it('should repeat trigger when scrolling', () => {
+      const getCurrentAnchor = jest.fn();
+      render(
+        <Anchor
+          getCurrentAnchor={getCurrentAnchor}
+          items={[{ key: 'test', href: null as unknown as string, title: 'test' }]}
+        />,
+      );
+
+      for (let i = 0; i < 100; i += 1) {
+        getCurrentAnchor.mockReset();
+        fireEvent.scroll(window || document);
+        expect(getCurrentAnchor).toHaveBeenCalled();
+      }
     });
   });
 
@@ -610,12 +690,12 @@ describe('Anchor Render', () => {
           items={[
             {
               key: '1',
-              href: '#components-anchor-demo-basic',
+              href: '#anchor-demo-basic',
               title: 'Item Basic Demo',
             },
             {
               key: '2',
-              href: '#components-anchor-demo-static',
+              href: '#anchor-demo-static',
               title: 'Static demo',
             },
             {
@@ -641,12 +721,12 @@ describe('Anchor Render', () => {
           items={[
             {
               key: '1',
-              href: '#components-anchor-demo-basic',
+              href: '#anchor-demo-basic',
               title: 'Item Basic Demo',
             },
             {
               key: '2',
-              href: '#components-anchor-demo-static',
+              href: '#anchor-demo-static',
               title: 'Static demo',
             },
             {
@@ -675,8 +755,8 @@ describe('Anchor Render', () => {
     it('nested children via jsx should be filtered out when direction is horizontal', () => {
       const { container } = render(
         <Anchor direction="horizontal">
-          <Link href="#components-anchor-demo-basic" title="Basic demo" />
-          <Link href="#components-anchor-demo-static" title="Static demo" />
+          <Link href="#anchor-demo-basic" title="Basic demo" />
+          <Link href="#anchor-demo-static" title="Static demo" />
           <Link href="#api" title="API">
             <Link href="#anchor-props" title="Anchor Props" />
             <Link href="#link-props" title="Link Props" />
@@ -820,12 +900,12 @@ describe('Anchor Render', () => {
           items={[
             {
               key: '1',
-              href: '#components-anchor-demo-basic',
+              href: '#anchor-demo-basic',
               title: 'Item Basic Demo',
             },
             {
               key: '2',
-              href: '#components-anchor-demo-static',
+              href: '#anchor-demo-static',
               title: 'Static demo',
             },
             {
@@ -851,8 +931,8 @@ describe('Anchor Render', () => {
     it('deprecated jsx style', () => {
       render(
         <Anchor direction="horizontal">
-          <Link href="#components-anchor-demo-basic" title="Basic demo" />
-          <Link href="#components-anchor-demo-static" title="Static demo" />
+          <Link href="#anchor-demo-basic" title="Basic demo" />
+          <Link href="#anchor-demo-static" title="Static demo" />
         </Anchor>,
       );
       expect(errSpy).toHaveBeenCalledWith(
@@ -863,8 +943,8 @@ describe('Anchor Render', () => {
     it('deprecated jsx style for direction#vertical', () => {
       render(
         <Anchor>
-          <Link href="#components-anchor-demo-basic" title="Basic demo" />
-          <Link href="#components-anchor-demo-static" title="Static demo" />
+          <Link href="#anchor-demo-basic" title="Basic demo" />
+          <Link href="#anchor-demo-static" title="Static demo" />
         </Anchor>,
       );
       expect(errSpy).toHaveBeenCalledWith(

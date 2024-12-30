@@ -1,12 +1,14 @@
+import * as React from 'react';
+import { useRef, useState } from 'react';
 import EyeInvisibleOutlined from '@ant-design/icons/EyeInvisibleOutlined';
 import EyeOutlined from '@ant-design/icons/EyeOutlined';
 import classNames from 'classnames';
 import omit from 'rc-util/lib/omit';
 import { composeRef } from 'rc-util/lib/ref';
-import * as React from 'react';
-import { useRef, useState } from 'react';
+
 import type { ConfigConsumerProps } from '../config-provider';
 import { ConfigContext } from '../config-provider';
+import DisabledContext from '../config-provider/DisabledContext';
 import useRemovePasswordTimeout from './hooks/useRemovePasswordTimeout';
 import type { InputProps, InputRef } from './Input';
 import Input from './Input';
@@ -14,25 +16,37 @@ import Input from './Input';
 const defaultIconRender = (visible: boolean): React.ReactNode =>
   visible ? <EyeOutlined /> : <EyeInvisibleOutlined />;
 
-type VisibilityToggle = {
+interface VisibilityToggle {
   visible?: boolean;
   onVisibleChange?: (visible: boolean) => void;
-};
+}
 
 export interface PasswordProps extends InputProps {
   readonly inputPrefixCls?: string;
-  readonly action?: string;
+  readonly action?: 'click' | 'hover';
   visibilityToggle?: boolean | VisibilityToggle;
   iconRender?: (visible: boolean) => React.ReactNode;
 }
 
-const ActionMap: Record<string, string> = {
+const actionMap: Record<PropertyKey, keyof React.DOMAttributes<HTMLSpanElement>> = {
   click: 'onClick',
   hover: 'onMouseOver',
 };
 
+type IconPropsType = React.HTMLAttributes<HTMLSpanElement> & React.Attributes;
+
 const Password = React.forwardRef<InputRef, PasswordProps>((props, ref) => {
-  const { visibilityToggle = true } = props;
+  const {
+    disabled: customDisabled,
+    action = 'click',
+    visibilityToggle = true,
+    iconRender = defaultIconRender,
+  } = props;
+
+  // ===================== Disabled =====================
+  const disabled = React.useContext(DisabledContext);
+  const mergedDisabled = customDisabled ?? disabled;
+
   const visibilityControlled =
     typeof visibilityToggle === 'object' && visibilityToggle.visible !== undefined;
   const [visible, setVisible] = useState(() =>
@@ -50,42 +64,43 @@ const Password = React.forwardRef<InputRef, PasswordProps>((props, ref) => {
   const removePasswordTimeout = useRemovePasswordTimeout(inputRef);
 
   const onVisibleChange = () => {
-    const { disabled } = props;
-    if (disabled) {
+    if (mergedDisabled) {
       return;
     }
     if (visible) {
       removePasswordTimeout();
     }
-    setVisible((prevState) => {
-      const newState = !prevState;
-      if (typeof visibilityToggle === 'object') {
-        visibilityToggle.onVisibleChange?.(newState);
-      }
-      return newState;
-    });
+
+    const nextVisible = !visible;
+    setVisible(nextVisible);
+
+    if (typeof visibilityToggle === 'object') {
+      visibilityToggle.onVisibleChange?.(nextVisible);
+    }
   };
 
   const getIcon = (prefixCls: string) => {
-    const { action = 'click', iconRender = defaultIconRender } = props;
-    const iconTrigger = ActionMap[action] || '';
+    const iconTrigger = actionMap[action] || '';
     const icon = iconRender(visible);
-    const iconProps = {
+    const iconProps: IconPropsType = {
       [iconTrigger]: onVisibleChange,
       className: `${prefixCls}-icon`,
       key: 'passwordIcon',
-      onMouseDown: (e: MouseEvent) => {
+      onMouseDown: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
         // Prevent focused state lost
         // https://github.com/ant-design/ant-design/issues/15173
         e.preventDefault();
       },
-      onMouseUp: (e: MouseEvent) => {
+      onMouseUp: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
         // Prevent caret position change
         // https://github.com/ant-design/ant-design/issues/23524
         e.preventDefault();
       },
     };
-    return React.cloneElement(React.isValidElement(icon) ? icon : <span>{icon}</span>, iconProps);
+    return React.cloneElement<IconPropsType>(
+      React.isValidElement<IconPropsType>(icon) ? icon : <span>{icon}</span>,
+      iconProps,
+    );
   };
 
   const {
@@ -122,7 +137,7 @@ const Password = React.forwardRef<InputRef, PasswordProps>((props, ref) => {
 });
 
 if (process.env.NODE_ENV !== 'production') {
-  Password.displayName = 'Password';
+  Password.displayName = 'Input.Password';
 }
 
 export default Password;

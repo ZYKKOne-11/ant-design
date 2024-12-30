@@ -1,5 +1,5 @@
-import { Select } from 'antd';
 import React from 'react';
+import { Select } from 'antd';
 
 const onChange = (value: string) => {
   console.log(`selected ${value}`);
@@ -12,14 +12,10 @@ const onSearch = (value: string) => {
 const App: React.FC = () => (
   <Select
     showSearch
-    style={{ width: 160 }}
     placeholder="Select a person"
-    optionFilterProp="children"
+    optionFilterProp="label"
     onChange={onChange}
     onSearch={onSearch}
-    filterOption={(input, option) =>
-      (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
-    }
     options={[
       {
         value: 'jack',

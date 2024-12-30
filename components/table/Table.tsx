@@ -1,28 +1,31 @@
 import * as React from 'react';
-import { Summary, EXPAND_COLUMN } from 'rc-table';
+import { EXPAND_COLUMN, Summary } from 'rc-table';
+import type { Reference } from 'rc-table';
+
+import type { AnyObject } from '../_util/type';
 import Column from './Column';
 import ColumnGroup from './ColumnGroup';
-import InternalTable from './InternalTable';
-import type { TableProps } from './InternalTable';
-import type { RefTable } from './interface';
 import {
   SELECTION_ALL,
   SELECTION_COLUMN,
   SELECTION_INVERT,
   SELECTION_NONE,
 } from './hooks/useSelection';
+import type { RefTable } from './interface';
+import type { TableProps } from './InternalTable';
+import InternalTable from './InternalTable';
 
-function Table<RecordType extends object = any>(
+const Table = <RecordType extends AnyObject = AnyObject>(
   props: TableProps<RecordType>,
-  ref: React.Ref<HTMLDivElement>,
-) {
-  const renderTimesRef = React.useRef(0);
+  ref: React.Ref<Reference>,
+) => {
+  const renderTimesRef = React.useRef<number>(0);
   renderTimesRef.current += 1;
-
   return <InternalTable<RecordType> {...props} ref={ref} _renderTimes={renderTimesRef.current} />;
-}
+};
 
-const ForwardTable = React.forwardRef(Table) as any as RefTable & {
+const ForwardTable = React.forwardRef(Table) as unknown as RefTable & {
+  displayName?: string;
   SELECTION_COLUMN: typeof SELECTION_COLUMN;
   EXPAND_COLUMN: typeof EXPAND_COLUMN;
   SELECTION_ALL: typeof SELECTION_ALL;
@@ -41,5 +44,9 @@ ForwardTable.SELECTION_NONE = SELECTION_NONE;
 ForwardTable.Column = Column;
 ForwardTable.ColumnGroup = ColumnGroup;
 ForwardTable.Summary = Summary;
+
+if (process.env.NODE_ENV !== 'production') {
+  ForwardTable.displayName = 'Table';
+}
 
 export default ForwardTable;

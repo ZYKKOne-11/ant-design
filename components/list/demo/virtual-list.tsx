@@ -25,21 +25,22 @@ const ContainerHeight = 400;
 const App: React.FC = () => {
   const [data, setData] = useState<UserItem[]>([]);
 
-  const appendData = () => {
+  const appendData = (showMessage = true) => {
     fetch(fakeDataUrl)
       .then((res) => res.json())
       .then((body) => {
         setData(data.concat(body.results));
-        message.success(`${body.results.length} more items loaded!`);
+        showMessage && message.success(`${body.results.length} more items loaded!`);
       });
   };
 
   useEffect(() => {
-    appendData();
+    appendData(false);
   }, []);
 
   const onScroll = (e: React.UIEvent<HTMLElement, UIEvent>) => {
-    if (e.currentTarget.scrollHeight - e.currentTarget.scrollTop === ContainerHeight) {
+    // Refer to: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#problems_and_solutions
+    if (Math.abs(e.currentTarget.scrollHeight - e.currentTarget.scrollTop - ContainerHeight) <= 1) {
       appendData();
     }
   };

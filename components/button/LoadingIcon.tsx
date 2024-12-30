@@ -1,12 +1,36 @@
+import React, { forwardRef } from 'react';
 import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
+import classNames from 'classnames';
 import CSSMotion from 'rc-motion';
-import React from 'react';
 
-export interface LoadingIconProps {
+import IconWrapper from './IconWrapper';
+
+type InnerLoadingIconProps = {
+  prefixCls: string;
+  className?: string;
+  style?: React.CSSProperties;
+  iconClassName?: string;
+};
+
+const InnerLoadingIcon = forwardRef<HTMLSpanElement, InnerLoadingIconProps>((props, ref) => {
+  const { prefixCls, className, style, iconClassName } = props;
+  const mergedIconCls = classNames(`${prefixCls}-loading-icon`, className);
+
+  return (
+    <IconWrapper prefixCls={prefixCls} className={mergedIconCls} style={style} ref={ref}>
+      <LoadingOutlined className={iconClassName} />
+    </IconWrapper>
+  );
+});
+
+export type LoadingIconProps = {
   prefixCls: string;
   existIcon: boolean;
   loading?: boolean | object;
-}
+  className?: string;
+  style?: React.CSSProperties;
+  mount: boolean;
+};
 
 const getCollapsedWidth = (): React.CSSProperties => ({
   width: 0,
@@ -20,22 +44,22 @@ const getRealWidth = (node: HTMLElement): React.CSSProperties => ({
   transform: 'scale(1)',
 });
 
-const LoadingIcon: React.FC<LoadingIconProps> = ({ prefixCls, loading, existIcon }) => {
+const LoadingIcon: React.FC<LoadingIconProps> = (props) => {
+  const { prefixCls, loading, existIcon, className, style, mount } = props;
   const visible = !!loading;
 
   if (existIcon) {
-    return (
-      <span className={`${prefixCls}-loading-icon`}>
-        <LoadingOutlined />
-      </span>
-    );
+    return <InnerLoadingIcon prefixCls={prefixCls} className={className} style={style} />;
   }
 
   return (
     <CSSMotion
       visible={visible}
-      // We do not really use this motionName
+      // Used for minus flex gap style only
       motionName={`${prefixCls}-loading-icon-motion`}
+      motionAppear={!mount}
+      motionEnter={!mount}
+      motionLeave={!mount}
       removeOnLeave
       onAppearStart={getCollapsedWidth}
       onAppearActive={getRealWidth}
@@ -44,11 +68,18 @@ const LoadingIcon: React.FC<LoadingIconProps> = ({ prefixCls, loading, existIcon
       onLeaveStart={getRealWidth}
       onLeaveActive={getCollapsedWidth}
     >
-      {({ className, style }: { className?: string; style?: React.CSSProperties }, ref: any) => (
-        <span className={`${prefixCls}-loading-icon`} style={style} ref={ref}>
-          <LoadingOutlined className={className} />
-        </span>
-      )}
+      {({ className: motionCls, style: motionStyle }, ref: React.Ref<HTMLSpanElement>) => {
+        const mergedStyle = { ...style, ...motionStyle };
+
+        return (
+          <InnerLoadingIcon
+            prefixCls={prefixCls}
+            className={classNames(className, motionCls)}
+            style={mergedStyle}
+            ref={ref}
+          />
+        );
+      }}
     </CSSMotion>
   );
 };

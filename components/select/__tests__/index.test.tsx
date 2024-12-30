@@ -1,12 +1,14 @@
 import React from 'react';
 import { CloseOutlined } from '@ant-design/icons';
+
 import type { SelectProps } from '..';
 import Select from '..';
+import Form from '../../form';
+import { resetWarned } from '../../_util/warning';
 import focusTest from '../../../tests/shared/focusTest';
 import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
-import { fireEvent, render, act } from '../../../tests/utils';
-import { resetWarned } from '../../_util/warning';
+import { act, fireEvent, render } from '../../../tests/utils';
 
 const { Option } = Select;
 
@@ -125,6 +127,43 @@ describe('Select', () => {
     });
   });
 
+  describe('clear icon position', () => {
+    it('normal', () => {
+      const { container } = render(
+        <Select allowClear options={[{ value: '1', label: '1' }]} value="1" />,
+      );
+      expect(
+        getComputedStyle(container.querySelector('.ant-select-clear')!).insetInlineEnd,
+      ).toEqual('11px');
+    });
+
+    it('hasFeedback, has validateStatus', () => {
+      const { container } = render(
+        <Form>
+          <Form.Item hasFeedback validateStatus="error">
+            <Select allowClear options={[{ value: '1', label: '1' }]} value="1" />,
+          </Form.Item>
+        </Form>,
+      );
+      expect(
+        getComputedStyle(container.querySelector('.ant-select-clear')!).insetInlineEnd,
+      ).toEqual('33px');
+    });
+
+    it('hasFeedback, no validateStatus', () => {
+      const { container } = render(
+        <Form>
+          <Form.Item hasFeedback validateStatus="">
+            <Select allowClear options={[{ value: '1', label: '1' }]} value="1" />,
+          </Form.Item>
+        </Form>,
+      );
+      expect(
+        getComputedStyle(container.querySelector('.ant-select-clear')!).insetInlineEnd,
+      ).toEqual('11px');
+    });
+  });
+
   describe('Deprecated', () => {
     it('should ignore mode="combobox"', () => {
       const { asFragment } = render(
@@ -145,6 +184,54 @@ describe('Select', () => {
       );
       expect(container.querySelector('.legacy')).toBeTruthy();
 
+      errSpy.mockRestore();
+    });
+
+    it('warning for legacy dropdownMatchSelectWidth', () => {
+      resetWarned();
+
+      const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      render(<Select dropdownMatchSelectWidth open />);
+      expect(errSpy).toHaveBeenCalledWith(
+        'Warning: [antd: Select] `dropdownMatchSelectWidth` is deprecated. Please use `popupMatchSelectWidth` instead.',
+      );
+
+      errSpy.mockRestore();
+    });
+
+    it('deprecate showArrow', () => {
+      resetWarned();
+
+      const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const { container } = render(<Select showArrow />);
+      expect(errSpy).toHaveBeenCalledWith(
+        'Warning: [antd: Select] `showArrow` is deprecated which will be removed in next major version. It will be a default behavior, you can hide it by setting `suffixIcon` to null.',
+      );
+      expect(container.querySelector('.ant-select-show-arrow')).toBeTruthy();
+
+      errSpy.mockRestore();
+    });
+
+    it('deprecate bordered', () => {
+      resetWarned();
+
+      const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const { container } = render(<Select bordered={false} />);
+      expect(errSpy).toHaveBeenCalledWith(
+        expect.stringContaining('Warning: [antd: Select] `bordered` is deprecated'),
+      );
+      expect(container.querySelector('.ant-select-borderless')).toBeTruthy();
+
+      errSpy.mockRestore();
+    });
+
+    it('Select maxCount warning', () => {
+      resetWarned();
+      const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      render(<Select maxCount={10} />);
+      expect(errSpy).toHaveBeenCalledWith(
+        'Warning: [antd: Select] `maxCount` only works with mode `multiple` or `tags`',
+      );
       errSpy.mockRestore();
     });
   });

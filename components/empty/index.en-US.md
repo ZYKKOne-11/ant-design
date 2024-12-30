@@ -2,11 +2,10 @@
 category: Components
 group: Data Display
 title: Empty
+description: Empty state placeholder.
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*ZdiZSLzEV0wAAAAAAAAAAAAADrJ8AQ/original
 coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*obM7S5lIxeMAAAAAAAAAAAAADrJ8AQ/original
 ---
-
-Empty state placeholder.
 
 ## When To Use
 
@@ -17,12 +16,14 @@ Empty state placeholder.
 
 <!-- prettier-ignore -->
 <code src="./demo/basic.tsx">Basic</code>
-<code src="./demo/simple.tsx">Chose image</code>
+<code src="./demo/simple.tsx">Choose image</code>
 <code src="./demo/customize.tsx">Customize</code>
 <code src="./demo/config-provider.tsx">ConfigProvider</code>
 <code src="./demo/description.tsx">No description</code>
 
 ## API
+
+Common props ref：[Common props](/docs/react/common-props)
 
 ```jsx
 <Empty>
@@ -62,3 +63,7 @@ Empty state placeholder.
     background-image: url("https://user-images.githubusercontent.com/507615/54591670-ac0a0180-4a65-11e9-846c-e55ffce0fe7b.png");
   }
 </style>
+
+## Design Token
+
+<ComponentTokenTable component="Empty"></ComponentTokenTable>

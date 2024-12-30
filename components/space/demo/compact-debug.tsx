@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import { SettingOutlined, CopyOutlined, DownloadOutlined } from '@ant-design/icons';
+import { CopyOutlined, DownloadOutlined, SettingOutlined } from '@ant-design/icons';
 import {
+  Button,
   Cascader,
+  DatePicker,
+  Divider,
+  Drawer,
+  Dropdown,
   Input,
+  InputNumber,
+  Modal,
+  Popover,
   Select,
   Space,
-  Button,
   Tooltip,
-  Modal,
-  Dropdown,
-  Drawer,
-  InputNumber,
-  DatePicker,
 } from 'antd';
 
 const { Option } = Select;
@@ -79,6 +81,17 @@ const App: React.FC = () => {
         />
         <Button type="primary">Submit</Button>
       </Space.Compact>
+      <Space.Compact>
+        <Input addonBefore="Prefix" defaultValue="mysite" showCount />
+        <Button type="primary">Submit</Button>
+        <Input
+          addonBefore="Prefix"
+          defaultValue="mysite"
+          showCount
+          addonAfter={<SettingOutlined />}
+        />
+        <Input addonBefore="Prefix" defaultValue="mysite" showCount />
+      </Space.Compact>
       <br />
       <Space.Compact>
         <Button onClick={() => setShowModal(true)}>debug Modal context</Button>
@@ -135,6 +148,26 @@ const App: React.FC = () => {
             </Space.Compact>
           </Drawer>
         )}
+      </Space.Compact>
+      <Space.Compact>
+        <Input placeholder="Debug Popover context" />
+        <Popover
+          content={
+            <>
+              <Input placeholder="Left Border" />
+              <Divider />
+              <DatePicker />
+              <Divider />
+              <InputNumber />
+              <Divider />
+              <Select />
+            </>
+          }
+          trigger={['click']}
+          placement="bottom"
+        >
+          <Button>Settings</Button>
+        </Popover>
       </Space.Compact>
       <Space.Compact>
         <InputNumber addonBefore="+" addonAfter="$" defaultValue={100} />

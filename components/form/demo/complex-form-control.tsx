@@ -30,7 +30,7 @@ const App: React.FC = () => (
       </Space>
     </Form.Item>
     <Form.Item label="Address">
-      <Input.Group compact>
+      <Space.Compact>
         <Form.Item
           name={['address', 'province']}
           noStyle
@@ -48,7 +48,7 @@ const App: React.FC = () => (
         >
           <Input style={{ width: '50%' }} placeholder="Input street" />
         </Form.Item>
-      </Input.Group>
+      </Space.Compact>
     </Form.Item>
     <Form.Item label="BirthDate" style={{ marginBottom: 0 }}>
       <Form.Item
@@ -66,7 +66,7 @@ const App: React.FC = () => (
         <Input placeholder="Input birth month" />
       </Form.Item>
     </Form.Item>
-    <Form.Item label=" " colon={false}>
+    <Form.Item label={null}>
       <Button type="primary" htmlType="submit">
         Submit
       </Button>

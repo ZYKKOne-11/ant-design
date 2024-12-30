@@ -1,9 +1,8 @@
-/* eslint-disable no-template-curly-in-string */
-
 import Pagination from 'rc-pagination/lib/locale/ru_RU';
+
+import type { Locale } from '.';
 import Calendar from '../calendar/locale/ru_RU';
 import DatePicker from '../date-picker/locale/ru_RU';
-import type { Locale } from '.';
 import TimePicker from '../time-picker/locale/ru_RU';
 
 const typeTemplate: string = '${label} не является типом ${type}';
@@ -57,6 +56,7 @@ const localeValues: Locale = {
     itemsUnit: 'элем.',
     remove: 'Удалить',
     selectAll: 'Выбрать все данные',
+    deselectAll: 'Очистить все данные',
     selectCurrent: 'Выбрать текущую страницу',
     selectInvert: 'Инвертировать выбор',
     removeAll: 'Удалить все данные',
@@ -80,9 +80,7 @@ const localeValues: Locale = {
     copy: 'Копировать',
     copied: 'Скопировано',
     expand: 'Раскрыть',
-  },
-  PageHeader: {
-    back: 'Назад',
+    collapse: 'Свернуть',
   },
   Form: {
     optional: '(необязательно)',
@@ -140,6 +138,12 @@ const localeValues: Locale = {
   QRCode: {
     expired: 'QR-код устарел',
     refresh: 'Обновить',
+  },
+  ColorPicker: {
+    presetEmpty: 'Пустой',
+    transparent: 'Прозрачный',
+    singleColor: 'Один цвет',
+    gradientColor: 'Градиент',
   },
 };
 

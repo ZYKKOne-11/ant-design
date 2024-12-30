@@ -1,14 +1,27 @@
-import { spyElementPrototype } from 'rc-util/lib/test/domHook';
 import React from 'react';
+import { spyElementPrototype } from 'rc-util/lib/test/domHook';
+
 import Popconfirm from '..';
 import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
-import { render, fireEvent, act, waitFakeTimer } from '../../../tests/utils';
+import { act, fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import Button from '../../button';
 
+// TODO: Remove this. Mock for React 19
+jest.mock('react-dom', () => {
+  const realReactDOM = jest.requireActual('react-dom');
+
+  if (realReactDOM.version.startsWith('19')) {
+    const realReactDOMClient = jest.requireActual('react-dom/client');
+    realReactDOM.createRoot = realReactDOMClient.createRoot;
+  }
+
+  return realReactDOM;
+});
+
 describe('Popconfirm', () => {
-  mountTest(Popconfirm);
-  rtlTest(Popconfirm);
+  mountTest(() => <Popconfirm title="test" />);
+  rtlTest(() => <Popconfirm title="test" />);
 
   const eventObject = expect.objectContaining({
     target: expect.anything(),
@@ -73,8 +86,7 @@ describe('Popconfirm', () => {
     expect(popconfirm.container.querySelector('.ant-popover')?.className).toContain(
       'ant-popover-placement-top',
     );
-    expect(popconfirm.container.querySelector('.ant-popover')?.innerHTML).toMatchSnapshot();
-    expect(popconfirm.container.querySelector('.ant-popover')?.innerHTML).toMatchSnapshot();
+    expect(popconfirm.container.querySelector('.ant-popover')).toMatchSnapshot();
   });
 
   it('shows content for render functions', async () => {
@@ -94,7 +106,7 @@ describe('Popconfirm', () => {
 
     expect(popconfirm.container.querySelector('.ant-popover')).not.toBe(null);
     expect(popconfirm.container.querySelector('.ant-popover')?.innerHTML).toContain('some-title');
-    expect(popconfirm.container.querySelector('.ant-popover')?.innerHTML).toMatchSnapshot();
+    expect(popconfirm.container.querySelector('.ant-popover')).toMatchSnapshot();
   });
 
   it('should be controlled by open', () => {
@@ -119,6 +131,38 @@ describe('Popconfirm', () => {
 
     popconfirm.rerender(
       <Popconfirm title="code" open={false}>
+        <span>show me your code</span>
+      </Popconfirm>,
+    );
+    act(() => {
+      jest.runAllTimers();
+    });
+    expect(popconfirm.container.querySelector('.ant-popover')).not.toBe(null);
+    jest.useRealTimers();
+  });
+
+  it('should be controlled by visible', () => {
+    jest.useFakeTimers();
+    const popconfirm = render(
+      <Popconfirm title="code">
+        <span>show me your code</span>
+      </Popconfirm>,
+    );
+
+    expect(popconfirm.container.querySelector('.ant-popover')).toBe(null);
+    popconfirm.rerender(
+      <Popconfirm title="code" visible>
+        <span>show me your code</span>
+      </Popconfirm>,
+    );
+
+    expect(popconfirm.container.querySelector('.ant-popover')).not.toBe(null);
+    expect(popconfirm.container.querySelector('.ant-popover')?.className).not.toContain(
+      'ant-popover-hidden',
+    );
+
+    popconfirm.rerender(
+      <Popconfirm title="code" visible={false}>
         <span>show me your code</span>
       </Popconfirm>,
     );
@@ -285,5 +329,53 @@ describe('Popconfirm', () => {
     await waitFakeTimer(500);
     // expect(container.textContent).toEqual('Unmounted');
     expect(error).not.toHaveBeenCalled();
+  });
+
+  it('should trigger onPopupClick', async () => {
+    const onPopupClick = jest.fn();
+
+    const popconfirm = render(
+      <Popconfirm title="pop test" onPopupClick={onPopupClick}>
+        <span>show me your code</span>
+      </Popconfirm>,
+    );
+    const triggerNode = popconfirm.container.querySelector('span')!;
+    fireEvent.click(triggerNode);
+    await waitFakeTimer();
+    fireEvent.click(popconfirm.container.querySelector('.ant-popover-inner-content')!);
+    expect(onPopupClick).toHaveBeenCalled();
+  });
+
+  // https://github.com/ant-design/ant-design/issues/42314
+  it('legacy onVisibleChange should only trigger once', async () => {
+    const onOpenChange = jest.fn();
+    const onVisibleChange = jest.fn();
+
+    const { container } = render(
+      <Popconfirm
+        title="will unmount"
+        onOpenChange={onOpenChange}
+        onVisibleChange={onVisibleChange}
+      >
+        <span className="target" />
+      </Popconfirm>,
+    );
+
+    fireEvent.click(container.querySelector('.target')!);
+    await waitFakeTimer();
+
+    expect(onOpenChange).toHaveBeenCalledTimes(1);
+    expect(onVisibleChange).toHaveBeenCalledTimes(1);
+  });
+
+  it('okText & cancelText could be empty', () => {
+    render(
+      <Popconfirm title="" okText="" cancelText="" open>
+        <span />
+      </Popconfirm>,
+    );
+
+    expect(document.body.querySelectorAll('.ant-btn')[0].textContent).toBe('Cancel');
+    expect(document.body.querySelectorAll('.ant-btn')[1].textContent).toBe('OK');
   });
 });

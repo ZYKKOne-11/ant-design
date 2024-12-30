@@ -5,9 +5,9 @@ import Draggable from 'react-draggable';
 
 const App: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(true);
   const [bounds, setBounds] = useState({ left: 0, top: 0, bottom: 0, right: 0 });
-  const draggleRef = useRef<HTMLDivElement>(null);
+  const draggleRef = useRef<HTMLDivElement>(null!);
 
   const showModal = () => {
     setOpen(true);
@@ -43,10 +43,7 @@ const App: React.FC = () => {
       <Modal
         title={
           <div
-            style={{
-              width: '100%',
-              cursor: 'move',
-            }}
+            style={{ width: '100%', cursor: 'move' }}
             onMouseOver={() => {
               if (disabled) {
                 setDisabled(false);
@@ -71,6 +68,7 @@ const App: React.FC = () => {
           <Draggable
             disabled={disabled}
             bounds={bounds}
+            nodeRef={draggleRef}
             onStart={(event, uiData) => onStart(event, uiData)}
           >
             <div ref={draggleRef}>{modal}</div>
